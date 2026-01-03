@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prénom Nom — Portfolio</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <!-- SIDEBAR FIXE -->
+  <aside id="sidebar">
+    <h1>Laura<br>Andriamifidy</h1>
+    <p class="status">Étudiante ingénieure</p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projets</a>
+    </nav>
+  </aside>
+
+
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <main id="content">
+
+
+    <section id="banner">
+      <h1>
+        <!-- Laura Andriamifidy -->
+      </h1>
+    </section>
+
+    <!-- SECTION ABOUT -->
+
+    <section id="about">
+      <h1>
+        Bienvenue !
+      </h1>
+      <h2>
+        Présentation
+      </h2>
+      <p>
+
+        Bonjour et bienvenue sur mon portfolio,
+        <BR>
+        <BR>Étudiante en Master 1 à l’ESILV, spécialisée en <b>Cloud Computing et Cybersécurité</b>, je suis actuellement à la recherche d’un stage de <b>16 semaines à partir du 13 avril 2026</b>, idéalement orienté vers la cybersécurité.
+        <BR>
+        <BR>Passionnée par la <b>sécurité informatique</b> et le <b>développement informatique</b>, j’ai eu l’opportunité de travailler sur plusieurs projets universitaires et personnels, me permettant de développer des compétences en HTML/CSS, JavaScript, Java, Rust, C#, C++, Python,... Ces expériences m’ont permis de renforcer ma capacité à concevoir des solutions robustes, à analyser des problématiques techniques et à m’adapter à de nouveaux environnements.
+        <BR>
+        <BR>Curieuse et rigoureuse, j’apprécie particulièrement la résolution de problèmes, l’analyse et l’apprentissage continu, des qualités essentielles dans les domaines du développement et de la cybersécurité.
+        <BR>
+        <BR>Ce portfolio présente une sélection de mes projets académiques et personnels, illustrant mon parcours, mes compétences techniques et mon intérêt pour les systèmes sécurisés.
+        
+
+      </p>
+    </section>
+
+
+    <!-- SECTION Projets -->
+    <section id="projects">
+      <h1>Projets</h1>
+
+      <!-- Sélecteur de catégorie -->
+      
+      <select id="filter">
+        <option value="all">Tous</option>
+        <option value="frontend">Front-end</option>
+        <option value="dev">Développement</option>
+        <option value="cybersec">Cybersécurité</option>
+        <option value="ml">Machine Learning</option>
+      </select>
+
+
+      <!-- Liste de projets : duplique un <article> par projet -->
+      <article class="project dev frontend project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Projet Plateforme en ligne d’apprentissage artistique (en cours)</h3>
+
+            <p>
+              Développement full-stack (Node and React) d’une plateforme de cours en
+              ligne avec streaming, abonnements et gamification.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Node</span></li>
+              <li><span class="tech-badge">React</span></li>
+              <li><span class="tech-badge">JavaScript</span></li>
+              <li><span class="tech-badge">PostgreSQL</span></li>
+            </ul>
+
+
+          </div>
+
+          <div class="project-img">
+            <img src="images/soul-art.png" alt="Projet traitement image" />
+          </div>
+        </div>
+      </article>
+
+
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Mini application desktop (JavaFX et MySQL)</h3>
+            <p>
+              Développement d'une application desktop en JavaFX avec
+              MySQL permettant la gestion de stock d’un magasin de
+              vêtements pour femmes, incluant la gestion des produits,
+              des ventes/achats, des remises et le suivi financier,
+              tout en respectant les patterns MVC et DAO.
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Java</span></li>
+              <li><span class="tech-badge">MySQL</span></li>
+            </ul>
+            <a href="https://github.com/sophieeanne/WomenShopFX.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="images/java1.png" alt="chiffrement" />
+          </div>
+        </div>
+
+      </article>
+
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Mini application web (Java et MySQL)</h3>
+            <p>
+              Développement d'une application web dynamique
+              en Java (Servlets/JSP) avec MySQL, suivant l’architecture
+              MVC et le pattern DAO. Elle permet de gérer une liste
+              d’étudiants via une interface web, avec les fonctionnalités
+              d'affichage, d'ajout, de modification et de suppression),
+              en utilisant Tomcat, et une navigation securisée entre les pages.
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Java</span></li>
+              <li><span class="tech-badge">MySQL</span></li>
+            </ul>
+            <a href="https://github.com/sophieeanne/WebStudentBook.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="images/java2.png" alt="chiffrement" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project ml project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3><a>Projet de prédiction de l’OEE avec IBM watsonx : machine learning</a></h3>
+            <p>
+              Développement d’un modèle de prédiction de l’OEE avec IBM watsonx : préparation
+              des données, entraînement AutoAI (XGBoost), compréhension du déploiement cloud et
+              du monitoring (qualité, dérive, explicabilité avec SHAP & LIME).
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">IBM watsonx</span></li>
+            </ul>
+          </div>
+          <div class="project-img">
+            <img src="images/projet-IBM.png" alt="Projet prédiction OEE" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project ml cybersec project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3><a>Détection d’intrusions réseau en Python (Machine Learning)</a></h3>
+            <p>
+              Création d’un modèle de classification supervisée en Python pour prédire
+              la présence d’une attaque en fonction du trafic réseau et du comportement
+              utilisateur. Pré-traitement des données, entraînement et évaluation.
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Python</span></li>
+            </ul>
+            <a href="https://github.com/manGjv/Cybersecurity-Intrusion-Detection.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="images/ml_projet.png" alt="Projet prédiction OEE" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project dev cybersec project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Outil de chiffrement/déchiffrement</h3>
+            <p>
+              Développement d'un outil CLI permettant de chiffrer et déchiffrer des données (fichiers ou texte)
+              avec des algorithmes simples ou avancés : César, XOR, AES-GCM, Chacha20
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Rust</span></li>
+            </ul>
+
+            <a href="https://github.com/Lolookkk/rust_bootcamp.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="images/chiffrement.png" alt="chiffrement" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Projet de traitement d'image</h3>
+            <p>
+              Traitement d'images BMP : format et structure d'une image Bitmap, nuance
+              de gris, image en noir et blanc, agrandissement, rétrecissement, rotation,
+              appliquer un filtre
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">C#</span></li>
+            </ul>
+
+          </div>
+          <div class="project-img">
+            <img src="images/traitement-image.bmp" alt="Projet traitement image" />
+          </div>
+        </div>
+      </article>
+
+
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Projet MySQL</h3>
+            <p>
+              Conception et développement d'un système de gestion pour VéloMax (réseau
+              de magasins de vélos) en C#/MySQL, avec modules de gestion des stocks,
+              commandes, fournisseurs, clients (particuliers/entreprises) et calcul de
+              statistiques commerciales
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">C#</span></li>
+              <li><span class="tech-badge">MySQL</span></li>
+            </ul>
+
+          </div>
+          <div class="project-img">
+            <img src="images/velomax.png" alt="Projet MySQL" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Création d'un simulateur de combat Pokémon en C++</h3>
+            <p>
+              Mise en oeuvre des principe de POO (héritage, polymorphisme, encapsulation)
+              avec un menu interactif, un système de types et de faiblesses/résistances
+              pour gérer des combats tour-par-tour.
+            </p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">C++</span></li>
+            </ul>
+            <a href="https://github.com/sophieeanne/projet-C-pokemon.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="images/pokemon.png" alt="Simulateur Pokémon" />
+          </div>
+        </div>
+      </article>
+
+      
+
+      <article class="project dev frontend project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Réalisation de mon portfolio</h3>
+            <ul class="tech-list">
+              <li><span class="tech-badge">HTML</span></li>
+              <li><span class="tech-badge">CSS</span></li>
+            </ul>
+          </div>
+          <div class="project-img">
+            <img src="images/portfolio.png" alt="portfolio" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project dev frontend project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Réalisation d'un blog de voyage (en cours)</h3>
+            <ul class="tech-list">
+              <li><span class="tech-badge">HTML</span></li>
+              <li><span class="tech-badge">CSS</span></li>
+              <li><span class="tech-badge">Javascript</span></li>
+            </ul>
+          </div>
+          <div class="project-img">
+            <img src="images/blog.png" alt="blog" />
+          </div>
+        </div>
+      </article>
+
+      
+
+
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Laura Andriamifidy</p>
+  </footer>
+  <script src="Script.js"></script>
+</body>
+
+</html>

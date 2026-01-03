@@ -1,0 +1,304 @@
+/* ==========================
+   GLOBAL
+========================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0B162C; /* Fond noir */ 
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+}
+
+body p {
+  color: rgba(218, 234, 255, 0.615);
+}
+
+
+h1 {
+  text-align : center;
+  font-size: 4rem;
+  color: white;
+}
+h2, h3 {
+  color: #ffffff;
+  margin-bottom: 0.5em;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 2px solid #fff;
+}
+
+
+/* ==========================
+   SECTIONS
+========================== */
+section:not(#banner) {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ==========================
+   BANNIÈRE
+========================== */
+#banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-image: url("./images/fond2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 22, 44, 0) 0%,
+    rgba(11, 22, 44, 0.6) 60%,
+    rgba(11, 22, 44, 1) 100%
+  );
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: #0B162C;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  border-right: 2px solid #444;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 1000;
+}
+
+#sidebar h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+  text-shadow: 1px 1px 3px #000;
+}
+
+
+#sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#sidebar nav a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 0;
+  border-left: 3px solid transparent;
+  transition: 0.3s;
+}
+
+#sidebar nav a:hover {
+  color: #3B556D;
+}
+
+/* Décale le contenu pour ne pas qu’il passe sous la sidebar */
+#content {
+  margin-left: 260px;
+}
+
+/* ==========================
+   CARTES PROJETS
+========================== */
+.project {
+  /*border-left: 4px solid #3bd1ff;*/
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+
+  /* Effets modernes */
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+
+.project:hover {
+  transform: scale(1.02);
+  background: rgba(59, 85, 109, 0.1); /* <-- éclaircissement au survol */
+  box-shadow: 0 0 15px rgba(59, 82, 255, 0.5); /* <-- glow autour de la carte */
+}
+
+.project h3 {
+  margin: 0 0 10px;
+  color: #5FC2BA;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #4d46ac;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 800px) {
+  #sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #444;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  #sidebar nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #content {
+    margin-left: 0;
+  }
+}
+
+
+
+
+/* ---- Projet avec image à gauche ---- */
+.project-with-img .project-content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px; /* espace entre texte et image */
+  align-items: center; /* verticalement centré */
+}
+
+.project-with-img .project-text {
+  flex: 4; /* texte prend plus de place */
+}
+
+.project-with-img .project-img {
+  flex: 1; /* image prend moins de place */
+}
+
+.project-with-img .project-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+/* ==========================
+   SELECT
+========================== */
+
+/* Style global du select */
+#filter {
+  background: #1C2942;
+  color: #ffffff;
+  border: 2px solid #1C2942;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  appearance: none; /* supprime le style natif */
+  min-width: 200px;
+}
+
+
+
+
+/* ==========================
+Logos
+========================== */
+.logo_github {
+  width: 35px;
+  height: auto;
+}
+
+
+/* ==========================
+Box
+========================== */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  margin-top: auto;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: #5FC2BA;
+  background: rgba(95, 194, 186, 0.15);
+
+  border-radius: 999px; /* effet pill */
+  white-space: nowrap;
+}
+
+
+
+/* ==========================
+
+========================== */
+
+.project-with-img .project-img {
+  max-width: 220px; /* taille max image */
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .project-with-img .project-img {
+    max-width: 180px;
+    margin: 0 auto; /* centre l’image */
+  }
+}
