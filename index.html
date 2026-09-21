@@ -69,67 +69,156 @@
       
       <select id="filter">
         <option value="all">Tous</option>
-        <option value="frontend">Front-end</option>
         <option value="dev">Développement</option>
         <option value="cybersec">Cybersécurité</option>
         <option value="ml">Machine Learning</option>
+        <option value="cloud">Cloud</option>
       </select>
 
 
       <!-- Liste de projets : duplique un <article> par projet -->
-      <article class="project dev frontend project-with-img">
+
+      <!-- 1. Gestionnaire de mots de passe local — Rust -->
+      <article class="project dev cybersec">
         <div class="project-content">
           <div class="project-text">
-            <h3>Projet Plateforme en ligne d’apprentissage artistique (en cours)</h3>
+            <h3>Gestionnaire de mots de passe local — Rust</h3>
 
             <p>
-              Développement full-stack (Node and React) d’une plateforme de cours en
-              ligne avec streaming, abonnements et gamification.
+              Développement d'une application de bureau de type coffre-fort numérique permettant de stocker localement des identifiants de manière chiffrée.
+              <br><br>
+              Le projet utilise notamment Argon2id pour la dérivation de clé, AES-256-GCM pour le chiffrement et un serveur HTTP local permettant la communication avec une extension navigateur.
             </p>
 
             <ul class="tech-list">
-              <li><span class="tech-badge">Node</span></li>
-              <li><span class="tech-badge">React</span></li>
-              <li><span class="tech-badge">JavaScript</span></li>
-              <li><span class="tech-badge">PostgreSQL</span></li>
+              <li><span class="tech-badge">Rust</span></li>
+              <li><span class="tech-badge">egui / eframe</span></li>
+              <li><span class="tech-badge">Argon2id</span></li>
+              <li><span class="tech-badge">AES-256-GCM</span></li>
+              <li><span class="tech-badge">Axum</span></li>
+              <li><span class="tech-badge">Tokio</span></li>
             </ul>
 
-
-          </div>
-
-          <div class="project-img">
-            <img src="images/soul-art.png" alt="Projet traitement image" />
-          </div>
-        </div>
-      </article>
-
-
-      <article class="project dev project-with-img">
-        <div class="project-content">
-          <div class="project-text">
-            <h3>Mini application desktop (JavaFX et MySQL)</h3>
-            <p>
-              Développement d'une application desktop en JavaFX avec
-              MySQL permettant la gestion de stock d’un magasin de
-              vêtements pour femmes, incluant la gestion des produits,
-              des ventes/achats, des remises et le suivi financier,
-              tout en respectant les patterns MVC et DAO.
-            </p>
-            <ul class="tech-list">
-              <li><span class="tech-badge">Java</span></li>
-              <li><span class="tech-badge">MySQL</span></li>
-            </ul>
-            <a href="https://github.com/sophieeanne/WomenShopFX.git">
+            <a href="https://github.com/Lolookkk/SafeVault.git">
               <img src="images/github.png" class="logo_github">
             </a>
-          </div>
-          <div class="project-img">
-            <img src="images/java1.png" alt="chiffrement" />
+            <a href="https://youtu.be/2BV0FN4xTSA">
+              <img src="images/youtube.png" class="logo_github" style="margin-left: 10px;">
+            </a>
+
           </div>
         </div>
-
       </article>
 
+      <!-- 2. Forum de discussion — Projet personnel -->
+      <article class="project dev cybersec">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Forum de discussion — Projet personnel (en développement)</h3>
+
+            <p>
+              Développement d'un forum de discussion web full-stack permettant la gestion des utilisateurs, des rôles, des rubriques, des ressources, des sujets et des réponses.
+              <br><br>
+              Le projet comprend également l'inscription, la connexion et différents niveaux de droits pour les administrateurs, modérateurs et membres.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Node.js</span></li>
+              <li><span class="tech-badge">React</span></li>
+              <li><span class="tech-badge">JavaScript</span></li>
+              <li><span class="tech-badge">Supabase</span></li>
+              <li><span class="tech-badge">PostgreSQL</span></li>
+              <li><span class="tech-badge">SQL</span></li>
+            </ul>
+
+            <a href="https://github.com/Lolookkk/forum.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Tests et sécurisation de pages web -->
+      <article class="project cybersec dev">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Tests et sécurisation de pages web</h3>
+
+            <p>
+              Projet pratique de cybersécurité web basé sur l'analyse, l'exploitation puis la correction de pages volontairement vulnérables.
+              <br><br>
+              Le projet porte notamment sur les injections SQL, les Stored XSS et le vol de session, avec mise en place de corrections adaptées.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">PHP</span></li>
+              <li><span class="tech-badge">SQL</span></li>
+              <li><span class="tech-badge">Apache</span></li>
+              <li><span class="tech-badge">MySQL</span></li>
+              <li><span class="tech-badge">XAMPP</span></li>
+            </ul>
+
+            <a href="https://youtu.be/hdlVBO40Bfk">
+              <img src="images/youtube.png" class="logo_github">
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Plateforme comparative d'audit smart contracts (projet à venir) -->
+      <article class="project cybersec dev">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Plateforme comparative d'audit de sécurité des smart contracts (projet à venir)</h3>
+
+            <p>
+              Développement prévu d'une plateforme web permettant d'analyser et de comparer les résultats de plusieurs outils d'audit de smart contracts, notamment Slither, Mythril et Echidna.
+              <br><br>
+              Le projet porte notamment sur la détection de vulnérabilités comme la réentrance, les problèmes de contrôle d'accès, les appels externes dangereux et la comparaison des faux positifs.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Solidity</span></li>
+              <li><span class="tech-badge">Python</span></li>
+              <li><span class="tech-badge">Slither</span></li>
+              <li><span class="tech-badge">Mythril</span></li>
+              <li><span class="tech-badge">Echidna</span></li>
+              <li><span class="tech-badge">Web</span></li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. StudyPet — Application Android -->
+      <article class="project dev">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>StudyPet — Application Android</h3>
+
+            <p>
+              Développement d'une application mobile Android de productivité intégrant un timer Pomodoro, un animal virtuel, une boutique et un système de récompenses.
+              <br><br>
+              Le projet comprend également l'intégration d'une API REST, la gestion des notifications, la navigation entre les écrans et des tests unitaires.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Kotlin</span></li>
+              <li><span class="tech-badge">Android</span></li>
+              <li><span class="tech-badge">Android Studio</span></li>
+              <li><span class="tech-badge">REST API</span></li>
+              <li><span class="tech-badge">ViewModel</span></li>
+              <li><span class="tech-badge">Fragments</span></li>
+              <li><span class="tech-badge">JUnit / Mockito</span></li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Mini application web (Java et MySQL) / Application web de gestion d'étudiants -->
       <article class="project dev project-with-img">
         <div class="project-content">
           <div class="project-text">
@@ -156,6 +245,7 @@
         </div>
       </article>
 
+      <!-- 7. Projet de prédiction de l’OEE avec IBM watsonx -->
       <article class="project ml project-with-img">
         <div class="project-content">
           <div class="project-text">
@@ -175,17 +265,19 @@
         </div>
       </article>
 
+      <!-- 8. Détection d'intrusions réseau en Python -->
       <article class="project ml cybersec project-with-img">
         <div class="project-content">
           <div class="project-text">
             <h3><a>Détection d’intrusions réseau en Python (Machine Learning)</a></h3>
             <p>
-              Création d’un modèle de classification supervisée en Python pour prédire
-              la présence d’une attaque en fonction du trafic réseau et du comportement
-              utilisateur. Pré-traitement des données, entraînement et évaluation.
+              Création d'un modèle de Machine Learning permettant de détecter la présence d'une attaque à partir de données liées au trafic réseau et au comportement utilisateur.
+              <br><br>
+              Le projet comprend le prétraitement des données, l'entraînement du modèle de classification et l'évaluation de ses performances.
             </p>
             <ul class="tech-list">
               <li><span class="tech-badge">Python</span></li>
+              <li><span class="tech-badge">Machine Learning</span></li>
             </ul>
             <a href="https://github.com/manGjv/Cybersecurity-Intrusion-Detection.git">
               <img src="images/github.png" class="logo_github">
@@ -197,6 +289,7 @@
         </div>
       </article>
 
+      <!-- 9. Outil de chiffrement/déchiffrement -->
       <article class="project dev cybersec project-with-img">
         <div class="project-content">
           <div class="project-text">
@@ -216,28 +309,34 @@
         </div>
       </article>
 
+      <!-- 10. Mini application desktop (JavaFX et MySQL) / Application desktop de gestion de stock -->
       <article class="project dev project-with-img">
         <div class="project-content">
           <div class="project-text">
-            <h3>Projet de traitement d'image</h3>
+            <h3>Mini application desktop (JavaFX et MySQL)</h3>
             <p>
-              Traitement d'images BMP : format et structure d'une image Bitmap, nuance
-              de gris, image en noir et blanc, agrandissement, rétrecissement, rotation,
-              appliquer un filtre
+              Développement d'une application desktop en JavaFX avec
+              MySQL permettant la gestion de stock d’un magasin de
+              vêtements pour femmes, incluant la gestion des produits,
+              des ventes/achats, des remises et le suivi financier,
+              tout en respectant les patterns MVC et DAO.
             </p>
-
             <ul class="tech-list">
-              <li><span class="tech-badge">C#</span></li>
+              <li><span class="tech-badge">Java</span></li>
+              <li><span class="tech-badge">MySQL</span></li>
             </ul>
-
+            <a href="https://github.com/sophieeanne/WomenShopFX.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
           </div>
           <div class="project-img">
-            <img src="images/traitement-image.bmp" alt="Projet traitement image" />
+            <img src="images/java1.png" alt="chiffrement" />
           </div>
         </div>
+
       </article>
 
-
+      <!-- 11. Projet MySQL / Système de gestion VéloMax -->
       <article class="project dev project-with-img">
         <div class="project-content">
           <div class="project-text">
@@ -261,6 +360,7 @@
         </div>
       </article>
 
+      <!-- 12. Simulateur de combat Pokémon en C++ -->
       <article class="project dev project-with-img">
         <div class="project-content">
           <div class="project-text">
@@ -283,38 +383,115 @@
         </div>
       </article>
 
+      <!-- 13. Projet de traitement d'image — C# -->
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Projet de traitement d'image</h3>
+            <p>
+              Traitement d'images BMP : format et structure d'une image Bitmap, nuance
+              de gris, image en noir et blanc, agrandissement, rétrecissement, rotation,
+              appliquer un filtre
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">C#</span></li>
+            </ul>
+
+          </div>
+          <div class="project-img">
+            <img src="images/traitement-image.bmp" alt="Projet traitement image" />
+          </div>
+        </div>
+      </article>
+
+      <!-- 14. Projet Plateforme en ligne d'apprentissage artistique (projet existant non listé, conservé) -->
+      <article class="project dev project-with-img">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Projet Plateforme en ligne d’apprentissage artistique (en cours)</h3>
+
+            <p>
+              Développement full-stack (Node and React) d’une plateforme de cours en
+              ligne avec streaming, abonnements et gamification.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Node</span></li>
+              <li><span class="tech-badge">React</span></li>
+              <li><span class="tech-badge">JavaScript</span></li>
+              <li><span class="tech-badge">PostgreSQL</span></li>
+            </ul>
+
+
+          </div>
+
+          <div class="project-img">
+            <img src="images/soul-art.png" alt="Projet traitement image" />
+          </div>
+        </div>
+      </article>
+
+      <!-- 15. Memory Trouble — C & DevSecOps (tout en bas) -->
+      <article class="project cybersec dev cloud">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Memory Trouble — C &amp; DevSecOps</h3>
+
+            <p>
+              Projet autour de l'amélioration de la qualité d'un projet C et de la mise en place d'une chaîne CI/CD avec GitLab.
+              <br><br>
+              Le projet utilise notamment l'analyse statique, les tests, Valgrind, SonarQube, la couverture de code et les Quality Gates.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">C</span></li>
+              <li><span class="tech-badge">GitLab CI/CD</span></li>
+              <li><span class="tech-badge">GCC</span></li>
+              <li><span class="tech-badge">Cppcheck</span></li>
+              <li><span class="tech-badge">Clang-Tidy</span></li>
+              <li><span class="tech-badge">Valgrind</span></li>
+              <li><span class="tech-badge">SonarQube</span></li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 16. API de recommandation musicale — Performance (tout en bas, contribution faible) -->
+      <article class="project dev cloud">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>API de recommandation musicale — Performance</h3>
+
+            <p>
+              Projet d'optimisation d'une API de recommandation musicale basée sur un dataset de plus de 32 000 titres Spotify.
+              <br><br>
+              Le projet étudie notamment l'utilisation de C++, MongoDB, Redis, du multithreading et de NGINX afin d'améliorer les performances et la capacité à gérer une forte charge.
+            </p>
+
+            <ul class="tech-list">
+              <li><span class="tech-badge">Python</span></li>
+              <li><span class="tech-badge">FastAPI</span></li>
+              <li><span class="tech-badge">C++</span></li>
+              <li><span class="tech-badge">MongoDB</span></li>
+              <li><span class="tech-badge">Redis</span></li>
+              <li><span class="tech-badge">NGINX</span></li>
+            </ul>
+
+            <a href="https://github.com/sophieeanne/spotify-project.git">
+              <img src="images/github.png" class="logo_github">
+            </a>
+
+          </div>
+        </div>
+      </article>
+
       
 
-      <article class="project dev frontend project-with-img">
-        <div class="project-content">
-          <div class="project-text">
-            <h3>Réalisation de mon portfolio</h3>
-            <ul class="tech-list">
-              <li><span class="tech-badge">HTML</span></li>
-              <li><span class="tech-badge">CSS</span></li>
-            </ul>
-          </div>
-          <div class="project-img">
-            <img src="images/portfolio.png" alt="portfolio" />
-          </div>
-        </div>
-      </article>
 
-      <article class="project dev frontend project-with-img">
-        <div class="project-content">
-          <div class="project-text">
-            <h3>Réalisation d'un blog de voyage (en cours)</h3>
-            <ul class="tech-list">
-              <li><span class="tech-badge">HTML</span></li>
-              <li><span class="tech-badge">CSS</span></li>
-              <li><span class="tech-badge">Javascript</span></li>
-            </ul>
-          </div>
-          <div class="project-img">
-            <img src="images/blog.png" alt="blog" />
-          </div>
-        </div>
-      </article>
+
+
 
       
 
