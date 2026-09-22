@@ -44,6 +44,17 @@ section:not(#banner) {
   margin: auto;
 }
 
+section:not(#banner) ul {
+  color: rgba(218, 234, 255, 0.615);
+  padding-left: 20px;
+  margin: 10px 0 20px 0;
+}
+
+section:not(#banner) ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
 /* ==========================
    BANNIÈRE
 ========================== */
@@ -313,5 +324,227 @@ Box
   .project-with-img .project-img {
     max-width: 180px;
     margin: 0 auto; /* centre l’image */
+  }
+}
+
+/* ==========================
+   BOUTON "EN SAVOIR PLUS"
+========================== */
+.more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 18px;
+  background: transparent;
+  color: #5FC2BA;
+  border: 2px solid #5FC2BA;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.more-btn:hover {
+  background: rgba(95, 194, 186, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(95, 194, 186, 0.2);
+}
+
+/* ==========================
+   MODALS (overlay + contenu)
+========================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 22, 44, 0.85);
+  z-index: 9999;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  background: #0B162C;
+  border: 2px solid #444;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  margin: auto 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: modalIn 0.25s ease-out;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-header {
+  padding: 30px 35px 15px 35px;
+  border-bottom: 2px solid #444;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.modal-subtitle {
+  margin: 6px 0 0 0;
+  color: #5FC2BA;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.modal-body {
+  padding: 25px 35px 35px 35px;
+}
+
+.modal-body h3 {
+  color: #5FC2BA;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.modal-body h3:first-of-type {
+  margin-top: 10px;
+}
+
+.modal-body p,
+.modal-body ul,
+.modal-body li {
+  color: rgba(218, 234, 255, 0.75);
+  line-height: 1.7;
+}
+
+.modal-body b {
+  color: #fff;
+}
+
+.modal-body ul {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.modal-body ul li {
+  margin-bottom: 6px;
+}
+
+.modal-body ul ul {
+  margin-top: 6px;
+}
+
+/* ==========================
+   GALERIES D'IMAGES
+========================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.gallery-placeholder {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed rgba(95, 194, 186, 0.35);
+  border-radius: 8px;
+  background: rgba(95, 194, 186, 0.05);
+  color: rgba(218, 234, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.85rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.gallery-placeholder:hover {
+  border-color: rgba(95, 194, 186, 0.6);
+  background: rgba(95, 194, 186, 0.1);
+}
+
+/* Quand tu ajouteras tes images, remplace .gallery-placeholder par :
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  border: 2px solid rgba(95, 194, 186, 0.2);
+}
+*/
+
+/* ==========================
+   RESPONSIVE — MODALS
+========================== */
+@media (max-width: 800px) {
+  .modal-overlay {
+    padding: 16px 10px;
+  }
+
+  .modal-header {
+    padding: 25px 20px 15px 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.6rem;
+    padding-right: 30px;
+  }
+
+  .modal-body {
+    padding: 20px 20px 25px 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 12px;
+    font-size: 28px;
   }
 }

@@ -24,18 +24,91 @@
     </nav>
   </aside>
 
-
-
-
   <!-- CONTENU PRINCIPAL -->
   <main id="content">
 
     <section id="a-cote">
       <h1>À côté</h1>
-      <h2>Section à compléter</h2>
-      <p>
-        (Contenu à venir)
-      </p>
+      <h2>Ce que je fais en dehors de l’informatique</h2>
+
+      <!-- 1. Musique -->
+      <article class="project activity">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Musique</h3>
+            <p>Piano – Chant – MAO</p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Piano</span></li>
+              <li><span class="tech-badge">Chant</span></li>
+              <li><span class="tech-badge">MAO</span></li>
+              <li><span class="tech-badge">Synthé</span></li>
+            </ul>
+            <button class="more-btn" data-modal="modal-musique">En savoir plus →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Art -->
+      <article class="project activity">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Art</h3>
+            <p>Peinture – dessin</p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Peinture</span></li>
+              <li><span class="tech-badge">Dessin</span></li>
+              <li><span class="tech-badge">Leonart</span></li>
+            </ul>
+            <button class="more-btn" data-modal="modal-art">En savoir plus →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Karaté & self-défense -->
+      <article class="project activity">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Karaté &amp; self-défense</h3>
+            <p>Sport</p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Karaté</span></li>
+              <li><span class="tech-badge">Self-défense</span></li>
+            </ul>
+            <button class="more-btn" data-modal="modal-karate">En savoir plus →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Cuisine -->
+      <article class="project activity">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Cuisine</h3>
+            <p>Cuisine – découverte</p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Recettes</span></li>
+              <li><span class="tech-badge">Expérimentation</span></li>
+            </ul>
+            <button class="more-btn" data-modal="modal-cuisine">En savoir plus →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Voyage -->
+      <article class="project activity">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Voyage</h3>
+            <p>Découverte de nouvelles cultures</p>
+            <ul class="tech-list">
+              <li><span class="tech-badge">Europe</span></li>
+              <li><span class="tech-badge">Cultures</span></li>
+            </ul>
+            <button class="more-btn" data-modal="modal-voyage">En savoir plus →</button>
+          </div>
+        </div>
+      </article>
+
     </section>
 
   </main>
@@ -43,6 +116,186 @@
   <footer>
     <p>© <span id="year">2026</span> Laura Andriamifidy</p>
   </footer>
+
+  <!-- =========================
+       MODALS — Détails activités
+       ========================= -->
+
+  <!-- MODAL MUSIQUE -->
+  <div class="modal-overlay" id="modal-musique" role="dialog" aria-modal="true" aria-labelledby="modal-musique-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-musique" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-musique-title">Musique</h2>
+        <p class="modal-subtitle">Piano – Chant – MAO</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          La musique m’accompagne depuis l’enfance. J’ai commencé par le piano en prenant des cours.
+        </p>
+
+        <h3>Piano</h3>
+        <ul>
+          <li><b>École de musique (2011-2019)</b> : piano et solfège, jusqu’au niveau 2C3.</li>
+          <li><b>Conservatoire d’Avignon (2019-2022)</b> :
+            <ul>
+              <li>Piano : de 1C4 à 2C3</li>
+              <li>Solfège : de 2C2 à 2C4, avec obtention du Certificat d’Études Musicales (CEM)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Concours et représentations</h3>
+        <p>
+          J’ai participé au Grand Concours Musical de Piano à Pernes-les-Fontaines :
+        </p>
+        <ul>
+          <li>2013 : Médaille d’or à l’unanimité</li>
+          <li>2014 : Médaille d’or à l’unanimité</li>
+          <li>2015 : Médaille d’argent</li>
+          <li>2017 : Médaille d’or à l’unanimité</li>
+          <li>2018 : Médaille d’or à l’unanimité en quatre mains &amp; Médaille de bronze en piano seul</li>
+        </ul>
+        <p>
+          J’ai également participé régulièrement à différentes prestations : auditions de piano, représentations en église, interventions en EHPAD, masterclass, concerts collectifs et prestations en quatre mains.
+        </p>
+
+        <h3>Style de musique</h3>
+        <p>
+          J’ai une grande préférence pour le style romantique, mais j’ai également eu l’occasion de pratiquer des morceaux variés de différents compositeurs célèbres, comme Bach, Mendelssohn, Chopin, Scarlatti ou encore Debussy.
+        </p>
+
+        <h3>Autres pratiques musicales</h3>
+        <p>
+          J’ai également élargi ma pratique de la musique en apprenant certaines choses en autodidacte.
+          <br><br>
+          Je me suis mise au chant en 2019. Je chante principalement de la pop, mais aussi quelques chansons françaises ou du rock. J’ai notamment eu l’occasion de chanter lors d’événements, comme des mariages, et j’aime chanter régulièrement dans des karaokés, privés ou ouverts au public, lorsque j’en ai l’occasion.
+          <br><br>
+          Avec le chant est naturellement venu l’apprentissage des accords de base à la guitare, afin de pouvoir m’accompagner, mais surtout la découverte de la musique assistée par ordinateur (MAO) en 2020 pour pouvoir m’enregistrer.
+          <br><br>
+          J’ai d’abord commencé avec Ableton, puis j’ai migré vers N-Track Studio. J’ai notamment expérimenté la superposition des voix et des sons, l’ajustement des filtres, l’amélioration du son et les enregistrements MIDI.
+          <br><br>
+          J’ai également commencé le synthétiseur en 2024, qui me permet davantage de créer et de manipuler mes propres sons.
+        </p>
+
+        <h3>Aujourd’hui</h3>
+        <p>
+          Aujourd’hui, même si mon rythme de pratique est beaucoup moins dense qu’avant le début de mes études, la musique continue de faire partie de mon quotidien, parfois de manière occasionnelle et sous différentes formes : MAO, karaokés, grandes occasions ou simplement entretien des morceaux que j’ai appris au piano.
+        </p>
+
+        <!-- Galerie photos/vidéo -->
+        <h3>Galerie</h3>
+        <div class="gallery">
+          <div class="gallery-placeholder">Photo / vidéo à venir</div>
+          <div class="gallery-placeholder">Photo / vidéo à venir</div>
+          <div class="gallery-placeholder">Photo / enregistrement à venir</div>
+          <div class="gallery-placeholder">Photo / vidéo à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ART -->
+  <div class="modal-overlay" id="modal-art" role="dialog" aria-modal="true" aria-labelledby="modal-art-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-art" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-art-title">Art</h2>
+        <p class="modal-subtitle">Peinture – dessin</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          J’ai pratiqué différentes activités artistiques de manière assez régulière avant 2022, puis de façon plus occasionnelle depuis.
+          <br><br>
+          J’ai également été membre de l’association étudiante Leonart pendant l’année universitaire 2025-2026.
+        </p>
+
+        <h3>Galerie</h3>
+        <div class="gallery">
+          <div class="gallery-placeholder">Peinture à venir</div>
+          <div class="gallery-placeholder">Dessin à venir</div>
+          <div class="gallery-placeholder">Peinture à venir</div>
+          <div class="gallery-placeholder">Dessin à venir</div>
+          <div class="gallery-placeholder">Peinture à venir</div>
+          <div class="gallery-placeholder">Dessin à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL KARATÉ -->
+  <div class="modal-overlay" id="modal-karate" role="dialog" aria-modal="true" aria-labelledby="modal-karate-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-karate" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-karate-title">Karaté &amp; self-défense</h2>
+        <p class="modal-subtitle">Sport</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          J’ai commencé le karaté en septembre 2026. Il s’agit d’une activité que je découvre actuellement, et je suis pour le moment ceinture blanche.
+          <br><br>
+          J’ai également commencé la self-défense, qui comprend notamment des exercices basés sur l’improvisation et la mise en situation.
+          <br><br>
+          Dans le cadre du club, je pratique actuellement deux fois par semaine.
+        </p>
+
+        <h3>Photo</h3>
+        <div class="gallery">
+          <div class="gallery-placeholder">Photo à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CUISINE -->
+  <div class="modal-overlay" id="modal-cuisine" role="dialog" aria-modal="true" aria-labelledby="modal-cuisine-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-cuisine" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-cuisine-title">Cuisine</h2>
+        <p class="modal-subtitle">Cuisine – découverte</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          J’ai commencé à cuisiner en juin 2026.
+          <br><br>
+          Je pratique régulièrement et j’aime notamment découvrir de nouvelles recettes et expérimenter différents plats.
+        </p>
+
+        <h3>Galerie</h3>
+        <div class="gallery">
+          <div class="gallery-placeholder">Plat 1 à venir</div>
+          <div class="gallery-placeholder">Plat 2 à venir</div>
+          <div class="gallery-placeholder">Plat 3 à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL VOYAGE -->
+  <div class="modal-overlay" id="modal-voyage" role="dialog" aria-modal="true" aria-labelledby="modal-voyage-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-voyage" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-voyage-title">Voyage</h2>
+        <p class="modal-subtitle">Découverte de nouvelles cultures</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          J’aime découvrir de nouveaux pays et de nouvelles cultures, pour l’instant sur le continent européen, notamment à travers mes voyages en Angleterre, dans les pays scandinaves et dans les pays baltes.
+        </p>
+
+        <h3>Photos</h3>
+        <div class="gallery">
+          <div class="gallery-placeholder">Photo voyage à venir</div>
+          <div class="gallery-placeholder">Photo voyage à venir</div>
+          <div class="gallery-placeholder">Photo voyage à venir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="Script.js"></script>
 </body>
 
