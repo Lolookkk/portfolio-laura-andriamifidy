@@ -127,6 +127,12 @@ section:not(#banner) {
   color: #3B556D;
 }
 
+#sidebar nav a.active {
+  color: #5FC2BA;
+  border-left: 3px solid #5FC2BA;
+  padding-left: 10px;
+}
+
 /* Décale le contenu pour ne pas qu’il passe sous la sidebar */
 #content {
   margin-left: 260px;
@@ -190,6 +196,13 @@ footer {
   #sidebar nav {
     flex-direction: row;
     gap: 20px;
+  }
+
+  #sidebar nav a.active {
+    border-left: none;
+    border-bottom: 3px solid #5FC2BA;
+    padding-left: 0;
+    padding-bottom: 5px;
   }
 
   #content {
