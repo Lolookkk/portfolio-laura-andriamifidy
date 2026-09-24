@@ -104,6 +104,8 @@
               <img src="images/github.png" class="logo_github">
             </a>
 
+            <button class="more-btn" data-modal="modal-forum">En savoir plus →</button>
+
           </div>
         </div>
       </article>
@@ -465,6 +467,80 @@
   <footer>
     <p>© <span id="year">2026</span> Laura Andriamifidy</p>
   </footer>
+
+  <!-- MODAL FORUM -->
+  <div class="modal-overlay" id="modal-forum" role="dialog" aria-modal="true" aria-labelledby="modal-forum-title">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-forum" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-forum-title">Forum de discussion pour personnes timides ou sujettes à l’anxiété sociale</h2>
+        <p class="modal-subtitle">Projet personnel (en développement) — août 2026</p>
+      </div>
+      <div class="modal-body">
+
+        <h3>L’idée du projet</h3>
+        <p>
+          J’ai commencé ce projet personnel en août 2026 autour d’une idée : créer un espace de discussion destiné notamment aux personnes timides ou sujettes à l’anxiété sociale, afin de leur permettre d’échanger plus facilement avec d’autres personnes.
+          <br><br>
+          L’objectif n’est pas de créer une plateforme médicale ou un service de thérapie, mais plutôt un espace communautaire permettant de parler de ses difficultés, de partager ses expériences et de trouver du soutien auprès d’autres personnes. Je voulais également que le forum ne soit pas uniquement centré sur ces difficultés : chacun peut aussi y parler de ses passions, de ses hobbies, de ses projets ou simplement de sa vie quotidienne. Le forum se veut donc généraliste.
+          <br><br>
+          Des ressources et des numéros utiles sont également prévus afin d’apporter des informations et, lorsque cela est nécessaire, d’orienter les utilisateurs vers des professionnels ou des services adaptés.
+        </p>
+
+        <h3>Conception du projet</h3>
+        <p>
+          Avant de commencer le développement, j’ai pris le temps de définir une structure assez précise du projet afin d’avoir une vision claire de ce que je voulais construire.
+          <br><br>
+          J’ai notamment rédigé trois documents :
+        </p>
+        <ul>
+          <li><b>BRD (Business Requirements Document)</b> : définition des besoins et des objectifs du projet ;</li>
+          <li><b>SRS (Software Requirements Specification)</b> : description des fonctionnalités et exigences du forum ;</li>
+          <li><b>SDD (Software Design Document)</b> : conception technique et architecture de l’application.</li>
+        </ul>
+        <p>
+          Le projet a naturellement évolué depuis, mais cette étape m’a permis de partir sur une base structurée avant de commencer à développer.
+        </p>
+
+        <h3>Développement</h3>
+        <p>
+          Le projet est développé avec une architecture <b>MVC (Model-View-Controller)</b>, que j’ai choisie pour garder une séparation claire entre les différentes parties de l’application.
+        </p>
+        <p><b>Technologies utilisées :</b></p>
+        <ul>
+          <li>Node.js</li>
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>PostgreSQL / Supabase</li>
+          <li>SQL</li>
+          <li>Git / GitHub</li>
+        </ul>
+        <p>
+          Le MVP comprend notamment l’authentification, les profils utilisateurs, les rôles, les catégories et sous-catégories, la création de discussions et de réponses, les signalements, les ressources, les annonces ainsi qu’une partie administration.
+          <br><br>
+          J’utilise également GitHub pour gérer les versions du projet et travailler avec différentes branches.
+        </p>
+
+        <h3>La suite du projet</h3>
+        <p>
+          Le projet est encore en développement. Une fois le MVP terminé, je prévois de déployer l’application afin de pouvoir commencer à la tester dans des conditions plus proches de son utilisation réelle.
+          <br><br>
+          Je souhaite organiser deux phases de bêta-test :
+        </p>
+        <ul>
+          <li>une première phase avec environ <b>5 personnes</b>, pas nécessairement concernées par la timidité ou l’anxiété sociale, afin de vérifier que le forum est intuitif et facile à utiliser ;</li>
+          <li>une seconde phase avec environ <b>20 personnes correspondant davantage au public cible</b>, afin d’obtenir des retours sur l’expérience réelle du forum.</li>
+        </ul>
+        <p>
+          La sécurité fait également partie des prochaines étapes importantes du projet. Étant spécialisée en cybersécurité, je souhaite réaliser un <b>audit de sécurité et des tests d’intrusion</b> avant d’aller plus loin dans le déploiement, notamment parce que les utilisateurs pourraient être amenés à partager des informations personnelles ou des pensées parfois sensibles.
+          <br><br>
+          Les retours des utilisateurs, les problèmes d’utilisation identifiés et les améliorations apportées au fil des tests permettront ensuite de mesurer concrètement l’évolution du projet.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
   <script src="Script.js"></script>
 </body>
 

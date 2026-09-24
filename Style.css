@@ -505,7 +505,6 @@ Box
   background: rgba(95, 194, 186, 0.1);
 }
 
-/* Quand tu ajouteras tes images, remplace .gallery-placeholder par :
 .gallery img {
   width: 100%;
   height: 100%;
@@ -513,8 +512,8 @@ Box
   border-radius: 8px;
   aspect-ratio: 4 / 3;
   border: 2px solid rgba(95, 194, 186, 0.2);
+  display: block;
 }
-*/
 
 /* ==========================
    RESPONSIVE — MODALS
