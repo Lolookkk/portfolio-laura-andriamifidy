@@ -1,4 +1,5 @@
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 marked.setOptions({
   gfm: true, // tableaux, listes de tâches, etc.
@@ -6,13 +7,13 @@ marked.setOptions({
 });
 
 /**
- * Convertit du Markdown en HTML pour l'affichage.
- * Le HTML brut reste accepté (le contenu existant continue de fonctionner),
- * ce qui permet une migration progressive vers le Markdown.
+ * Convertit du Markdown en HTML sécurisé pour l'affichage.
+ * DOMPurify nettoie tout script malveillant avant injection dans le DOM.
  * @param {string} text
  * @returns {string}
  */
 export function renderMarkdown(text) {
   if (!text) return '';
-  return marked.parse(String(text));
+  const rawHtml = marked.parse(String(text));
+  return DOMPurify.sanitize(rawHtml);
 }
