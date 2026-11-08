@@ -23,6 +23,7 @@ export default function App() {
 
       {/* Administration cachée (accessible uniquement par URL) */}
       <Route path="studio/login" element={<AdminLogin />} />
+      <Route path="studio/admin" element={<Navigate to="/studio" replace />} />
       <Route path="studio" element={<AdminRoute />}>
         <Route element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
