@@ -5,12 +5,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Laura Andriamifidy — À côté</title>
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="Style.css?v=2.2">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
-<body>
+<body class="has-migration-bar">
+  <!-- BANNIERE DE REDIRECTION NOUVEAU PORTFOLIO -->
+  <div id="migration-top-bar" class="migration-top-bar">
+    <div class="migration-top-bar-content">
+      <div class="migration-top-bar-text">
+        <span class="migration-top-bar-badge">✨ Nouveau</span>
+        <span>Mon portfolio a fait peau neuve ! Découvrez la nouvelle version dynamique développée avec React &amp; PostgreSQL.</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://portfolio-laura-andriamifidy.vercel.app/" class="migration-top-bar-btn" target="_blank" rel="noopener noreferrer">
+          Découvrir sur Vercel &rarr;
+        </a>
+        <button class="migration-top-bar-close" onclick="document.getElementById('migration-top-bar').remove(); document.body.classList.remove('has-migration-bar');" title="Fermer la bannière" aria-label="Fermer">&times;</button>
+      </div>
+    </div>
+  </div>
+
   <!-- SIDEBAR FIXE -->
   <aside id="sidebar">
     <h1>Laura<br>Andriamifidy</h1>
@@ -272,7 +288,7 @@
     </div>
   </div>
 
-  <script src="Script.js"></script>
+  <script src="Script.js?v=2.2"></script>
 </body>
 
 </html>
