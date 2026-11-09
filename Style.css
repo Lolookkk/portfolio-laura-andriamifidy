@@ -547,3 +547,206 @@ Box
     font-size: 28px;
   }
 }
+
+
+/* =========================================================
+   BANNIERE & ENCART DE MIGRATION VERS LE NOUVEAU PORTFOLIO VERCEL
+   ========================================================= */
+
+/* 1. Barre fixe tout en haut de l'ecran */
+.migration-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #091326 0%, #152b4f 50%, #091326 100%);
+  border-bottom: 2px solid #5FC2BA;
+  color: #ffffff;
+  z-index: 10001;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  padding: 10px 18px;
+  box-sizing: border-box;
+}
+
+.migration-top-bar-content {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.migration-top-bar-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 280px;
+  color: #e2edfb;
+}
+
+.migration-top-bar-badge {
+  background: #5FC2BA;
+  color: #0B162C;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.migration-top-bar-btn {
+  background: #5FC2BA;
+  color: #0B162C !important;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(95, 194, 186, 0.3);
+}
+
+.migration-top-bar-btn:hover {
+  background: #7fe6de;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(95, 194, 186, 0.5);
+}
+
+.migration-top-bar-close {
+  background: transparent;
+  border: none;
+  color: #9cb3ce;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.migration-top-bar-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.has-migration-bar {
+  padding-top: 50px;
+}
+
+body.has-migration-bar #sidebar {
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+
+@media (max-width: 800px) {
+  body.has-migration-bar {
+    padding-top: 85px;
+  }
+  body.has-migration-bar #sidebar {
+    top: 0;
+    height: auto;
+  }
+}
+
+/* 2. Grand encart explicatif dans la page d'accueil */
+.migration-card {
+  background: linear-gradient(135deg, rgba(21, 43, 79, 0.85) 0%, rgba(11, 22, 44, 0.95) 100%);
+  border: 1.5px solid rgba(95, 194, 186, 0.45);
+  border-left: 6px solid #5FC2BA;
+  border-radius: 12px;
+  padding: 26px 30px;
+  margin: 25px auto 45px auto;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.migration-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.migration-card-badge {
+  background: rgba(95, 194, 186, 0.2);
+  color: #5FC2BA;
+  border: 1px solid #5FC2BA;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.migration-card-date {
+  color: #9cb3ce;
+  font-size: 13px;
+}
+
+.migration-card h3 {
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.3px;
+}
+
+.migration-card p {
+  color: #d1e2f7 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  margin: 0 0 22px 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.migration-card p strong {
+  color: #ffffff;
+}
+
+.migration-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.migration-card-btn {
+  background: #5FC2BA;
+  color: #0B162C !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(95, 194, 186, 0.4);
+}
+
+.migration-card-btn:hover {
+  background: #7fe6de;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(95, 194, 186, 0.6);
+}
+
+.migration-card-note {
+  color: #8da4c4;
+  font-size: 0.9rem;
+}

@@ -74,3 +74,46 @@ document.addEventListener('keydown', (e) => {
     closeAllModals();
   }
 });
+
+
+/* =========================================================
+   BANNIÈRE FIXE : NOUVEAU PORTFOLIO SUR VERCEL
+   ========================================================= */
+function initMigrationBanner() {
+  if (document.getElementById('migration-top-bar')) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'migration-top-bar';
+  bar.className = 'migration-top-bar';
+  bar.innerHTML = `
+    <div class="migration-top-bar-content">
+      <div class="migration-top-bar-text">
+        <span class="migration-top-bar-badge">✨ Nouveau</span>
+        <span>Nouvelle version de mon portfolio</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://portfolio-laura-andriamifidy.vercel.app/" class="migration-top-bar-btn" target="_blank" rel="noopener noreferrer">
+          Découvrir sur Vercel &rarr;
+        </a>
+        <button class="migration-top-bar-close" title="Fermer la bannière" aria-label="Fermer">&times;</button>
+      </div>
+    </div>
+  `;
+
+  document.body.prepend(bar);
+  document.body.classList.add('has-migration-bar');
+
+  const closeBtn = bar.querySelector('.migration-top-bar-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      bar.remove();
+      document.body.classList.remove('has-migration-bar');
+    });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMigrationBanner);
+} else {
+  initMigrationBanner();
+}
