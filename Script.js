@@ -92,7 +92,7 @@ function initMigrationBanner() {
         <span>Nouvelle version de mon portfolio</span>
       </div>
       <div style="display: flex; align-items: center; gap: 12px;">
-        <a href="https://portfolio-laura-andriamifidy.vercel.app/" class="migration-top-bar-btn" target="_blank" rel="noopener noreferrer">
+        <a href="https://portfolio-laura.andriamifidy.fr/" class="migration-top-bar-btn" target="_blank" rel="noopener noreferrer">
           Découvrir sur Vercel &rarr;
         </a>
         <button class="migration-top-bar-close" title="Fermer la bannière" aria-label="Fermer">&times;</button>
